@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <title>Eternal Security Password Generator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Eternal Security</h1>
+      <h3>Password Generator</h3>
+    </div>
+    <div class="output">
+      <div class="password"></div>
+      <button class="copy"><span class="material-symbols-outlined">
+          content_copy
+        </span></button>
+    </div>
+    <div class="settings">
+      <div class="setting input-setting">
+        <label for="length">Password length</label>
+        <input id="length" type="number" min="3" max="50" value="20" />
+      </div>
+      <div class="setting checkbox-setting">
+        <label for="uppercase">Include uppercase letters</label>
+        <input id="uppercase" type="checkbox" checked />
+      </div>
+      <div class="setting checkbox-setting">
+        <label for="lowercase">Include lowercase letters</label>
+        <input id="lowercase" type="checkbox" checked />
+      </div>
+      <div class="setting checkbox-setting">
+        <label for="numbers">Include numbers</label>
+        <input id="numbers" type="checkbox" checked />
+      </div>
+      <div class="setting checkbox-setting">
+        <label for="symbols">Include symbols</label>
+        <input id="symbols" type="checkbox" checked />
+      </div>
+    </div>
+    <button class="generate">Generate</button>
+  </div>
+</body>
+
+</html>

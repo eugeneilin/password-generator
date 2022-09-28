@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #507dbc;
+  --secondary-color: #a1c6ea;
+  --third-color: #bbd1ea;
+  --light-color: #dae3e5;
+  --dark-color: #0c1f3e;
+}
+
+html,
+body {
+  font-family: 'Source Serif Pro', serif;
+  background-color: var(--third-color);
+  color: var(--dark-color);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.container {
+  background-color: var(--light-color);
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  max-width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0.2rem;
+  color: var(--primary-color);
+}
+
+.output {
+  background-color: var(--dark-color);
+  margin-top: 1rem;
+  display: flex;
+  letter-spacing: 1px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+}
+
+.password {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.copy {
+  background-color: var(--primary-color);
+  padding: 0.2rem;
+  margin-left: auto;
+  border-radius: 5px;
+  color: var(--light-color);
+}
+
+.copy:hover {
+  background-color: var(--third-color);
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.copy span {
+  line-height: unset;
+  padding-left: 2px;
+}
+
+.settings {
+  margin: 1rem 0;
+}
+
+.settings input {
+  border-radius: 4px;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.checkbox-setting label:hover,
+.checkbox-setting input:hover {
+  cursor: pointer;
+}
+
+.setting label {
+  width: 100%;
+}
+
+input[type='number'] {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='checkbox'] {
+  width: 2rem;
+  height: 2rem;
+}
+
+.generate {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  color: var(--light-color);
+  text-transform: uppercase;
+}
+
+.generate:hover {
+  background-color: var(--dark-color);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    align-items: center;
+  }
+
+  .container {
+    width: 50%;
+    padding: 2rem;
+  }
+}
