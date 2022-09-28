@@ -11,7 +11,7 @@
   --primary-color: #507dbc;
   --secondary-color: #a1c6ea;
   --third-color: #bbd1ea;
-  --light-color: #dae3e5;
+  --light-color: #ecf0f1;
   --dark-color: #0c1f3e;
 }
 
@@ -51,18 +51,23 @@ body {
   background-color: var(--dark-color);
   margin-top: 1rem;
   display: flex;
+  flex-direction: row;
   letter-spacing: 1px;
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid var(--secondary-color);
 }
 
-.password {
+#password {
   word-wrap: break-word;
   max-width: calc(100% - 40px);
+  color: white;
+  margin: auto 0;
+  padding-left: 0.5rem;
 }
 
-.copy {
+#copy,
+#done {
   background-color: var(--primary-color);
   padding: 0.2rem;
   margin-left: auto;
@@ -70,15 +75,20 @@ body {
   color: var(--light-color);
 }
 
-.copy:hover {
+#copy:hover {
   background-color: var(--third-color);
   color: var(--dark-color);
   cursor: pointer;
 }
 
-.copy span {
+#copy span,
+#done span {
   line-height: unset;
   padding-left: 2px;
+}
+
+#done {
+  display: none;
 }
 
 .settings {
@@ -111,13 +121,8 @@ input[type='number'] {
   text-align: center;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type='number'] {
-  -moz-appearance: textfield;
+#outputLength {
+  padding: 0 1rem;
 }
 
 input[type='checkbox'] {
@@ -125,7 +130,7 @@ input[type='checkbox'] {
   height: 2rem;
 }
 
-.generate {
+#generate {
   display: block;
   width: 100%;
   background-color: var(--primary-color);
@@ -134,11 +139,25 @@ input[type='checkbox'] {
   border-radius: 5px;
   color: var(--light-color);
   text-transform: uppercase;
+  font-family: 'Source Serif Pro', serif;
 }
 
-.generate:hover {
+#generate:hover {
   background-color: var(--dark-color);
   cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--dark-color);
 }
 
 @media only screen and (min-width: 768px) {

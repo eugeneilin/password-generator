@@ -18,23 +18,28 @@
       <h3>Password Generator</h3>
     </div>
     <div class="output">
-      <div class="password"></div>
-      <button class="copy"><span class="material-symbols-outlined">
+      <div id="password"></div>
+      <button id="copy"><span class="material-symbols-outlined">
           content_copy
+        </span></button>
+      <button id="done"><span class="material-symbols-outlined">
+          done
         </span></button>
     </div>
     <div class="settings">
       <div class="setting input-setting">
         <label for="length">Password length</label>
-        <input id="length" type="number" min="3" max="50" value="20" />
-      </div>
-      <div class="setting checkbox-setting">
-        <label for="uppercase">Include uppercase letters</label>
-        <input id="uppercase" type="checkbox" checked />
+        <output name="outputLength" id="outputLength">15</output>
+        <input type="range" name="inputLength" id="inputLength" value="15" min="3" max="20"
+          oninput="outputLength.value = inputLength.value" />
       </div>
       <div class="setting checkbox-setting">
         <label for="lowercase">Include lowercase letters</label>
         <input id="lowercase" type="checkbox" checked />
+      </div>
+      <div class="setting checkbox-setting">
+        <label for="uppercase">Include uppercase letters</label>
+        <input id="uppercase" type="checkbox" checked />
       </div>
       <div class="setting checkbox-setting">
         <label for="numbers">Include numbers</label>
@@ -45,8 +50,14 @@
         <input id="symbols" type="checkbox" checked />
       </div>
     </div>
-    <button class="generate">Generate</button>
+    <button id="generate">Generate</button>
   </div>
+
+  <footer><a href="https://eugeneilin.dev/">Get to know the developer :)
+    </a>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
